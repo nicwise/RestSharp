@@ -11,7 +11,6 @@
     <RootNamespace>RestSharp</RootNamespace>
     <MtouchSdkVersion>3.2</MtouchSdkVersion>
     <MtouchMinimumOS>3.0</MtouchMinimumOS>
-    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
     <AssemblyName>RestSharp.MonoTouch</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -22,13 +21,9 @@
     <DefineConstants>DEBUG;MONOTOUCH;FRAMEWORK</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchDebug>True</MtouchDebug>
+    <MtouchDebug>true</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
-    <MtouchArch>ARMv6</MtouchArch>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -37,14 +32,9 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchDebug>False</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <DefineConstants>MONOTOUCH;FRAMEWORK</DefineConstants>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
-    <MtouchArch>ARMv6</MtouchArch>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -55,13 +45,9 @@
     <DefineConstants>DEBUG;MONOTOUCH;FRAMEWORK</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchDebug>True</MtouchDebug>
+    <MtouchDebug>true</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
-    <MtouchArch>ARMv6</MtouchArch>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -70,14 +56,9 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchDebug>False</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <DefineConstants>MONOTOUCH;FRAMEWORK</DefineConstants>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
-    <MtouchArch>ARMv6</MtouchArch>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
