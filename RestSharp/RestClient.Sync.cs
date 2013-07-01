@@ -11,6 +11,14 @@ namespace RestSharp
 	public partial class RestClient
 	{
 
+
+		public static Action<object> globalLog;
+		public static void GlobalLog(object msg)
+		{
+			if (globalLog != null) 
+				globalLog (msg);
+		}
+
 		/// <summary>
 		/// Proxy to use for requests made by this client instance.
 		/// Passed on to underying WebRequest if set.
@@ -51,6 +59,7 @@ namespace RestSharp
 			}
 			catch (Exception ex)
 			{
+				Console.WriteLine (".???. " + ex.Message + " " + request.ToString());
 				response.ResponseStatus = ResponseStatus.Error;
 				response.ErrorMessage = ex.Message;
 				response.ErrorException = ex;
@@ -68,6 +77,23 @@ namespace RestSharp
 		public virtual IRestResponse<T> Execute<T>(IRestRequest request) where T : new()
 		{
 			var raw = Execute(request);
+
+			try
+			{
+				if (raw.ErrorException != null)
+				{
+
+					GlobalLog ("Ex: " + raw.ErrorMessage);
+					GlobalLog(raw.ErrorException.ToString ());
+
+				}
+
+
+			} catch
+			{
+
+			}
+
 			return Deserialize<T>(request, raw);
 		}
 		
