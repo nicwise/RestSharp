@@ -15,6 +15,8 @@ namespace RestSharp.Deserializers
 		public string DateFormat { get; set; }
 		public CultureInfo Culture { get; set; }
 
+		public static string LastJsonProcessed = "";
+
 		public JsonDeserializer()
 		{
 			Culture = CultureInfo.InvariantCulture;
@@ -22,6 +24,9 @@ namespace RestSharp.Deserializers
 
 		public T Deserialize<T>(IRestResponse response)
 		{
+
+			LastJsonProcessed = response.Content;
+
 			var target = Activator.CreateInstance<T>();
 
 			if (target is IList)
